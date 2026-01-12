@@ -29,6 +29,13 @@ function vp_override_planet_scale(name, scale)
 	planet_overrides[name].scale = scale
 end
 
+function vp_override_disable_planet_rotation(name)
+	if not planet_overrides[name] then
+		planet_overrides[name] = {}
+	end
+	planet_overrides[name].rotation = false
+end
+
 function vp_override_planet_sprite(name, filepath, size)
 	if not planet_overrides[name] then
 		planet_overrides[name] = {}
